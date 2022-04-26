@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+
+    <style>
+      .chart {
+        max-height: 50vh;
+        max-width: 50vw;
+      }
+    </style>
+
+    <title>Chart.js Practice Room</title>
+  </head>
+  <body>
+    <canvas id="lineChart" class="chart"></canvas>
+    <canvas id="dotChart" class="chart"></canvas>
+    <canvas id="barChart" class="chart"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      const mixedChart = new Chart(document.getElementById('lineChart'), {
+        data: {
+          labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+          datasets: [
+            {
+              type: 'line',
+              label: 'Line Dataset',
+              data: [0, 10, 20, 30, 25, 35],
+              backgroundColor: '#5555ff',
+              borderColor: '#7777ff'
+            },
+            {
+              type: 'bar',
+              label: 'Bar Dataset',
+              data: [5, 10, 20, 30, 40, 25],
+              backgroundColor: '#ff5555',
+              borderColor: '#ff7777'
+            }
+          ]
+        },
+        options: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      })
+    </script>
+  </body>
+</html>
