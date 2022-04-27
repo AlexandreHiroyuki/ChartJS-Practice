@@ -15,13 +15,11 @@
     <title>Chart.js Practice Room</title>
   </head>
   <body>
-    <canvas id="lineChart" class="chart"></canvas>
-    <canvas id="dotChart" class="chart"></canvas>
-    <canvas id="barChart" class="chart"></canvas>
+    <canvas id="chart" class="chart"></canvas>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
-      const mixedChart = new Chart(document.getElementById('lineChart'), {
+      const mixedChart = new Chart(document.getElementById('chart'), {
         data: {
           labels: ['January', 'February', 'March', 'April', 'May', 'June'],
           datasets: [
@@ -38,6 +36,13 @@
               data: [5, 10, 20, 30, 40, 25],
               backgroundColor: '#ff5555',
               borderColor: '#ff7777'
+            },
+            {
+              type: 'bubble',
+              label: 'Bubble Dataset',
+              data: [10, 15, 25, 35, 45, 30],
+              backgroundColor: '#999944',
+              borderColor: '#999922'
             }
           ]
         },
